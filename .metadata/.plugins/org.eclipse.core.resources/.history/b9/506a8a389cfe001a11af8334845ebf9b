@@ -1,0 +1,52 @@
+package br.ufg.inf.app;
+
+import java.util.List;
+
+import br.ufg.inf.ctrl.servico.CarroServico;
+import br.ufg.inf.model.dao.BancoProvisorio;
+import br.ufg.inf.model.entidade.Carro;
+import br.ufg.inf.model.entidade.Fabricante;
+import br.ufg.inf.model.entidade.Modelo;
+import br.ufg.inf.model.enumerador.TipoCarro;
+
+public class TesteCamada {
+	
+	CarroServico servico = new CarroServico();
+	
+	public void testarInserir() {
+		
+		System.out.println("Aqui");
+		
+		Fabricante fab = new Fabricante("Ford", 1);
+		BancoProvisorio.fabricantes.add(fab);
+		Modelo modelo1 = new Modelo("KA", 1, fab);
+		Modelo modelo2 = new Modelo("Escort", 2, fab);
+		BancoProvisorio.modelos.add(modelo1);
+		BancoProvisorio.modelos.add(modelo2);
+		
+		Carro car1 = new Carro(TipoCarro.HATCH, "ABC-1D23", 2019, "Prata", modelo1);
+		Carro car2 = new Carro(TipoCarro.HATCH, "YZM-9F78", 2019, "Azul", modelo2);
+		
+		//BancoProvisorio.carros.add(car1);
+		//BancoProvisorio.carros.add(car2);
+		
+		car1 = servico.inserir(car1);
+		car2 = servico.inserir(car2);
+		List<Carro> cars = servico.listar();
+		for(Carro c : cars) {
+			System.out.println(c);
+		}
+		
+		car2.setCor("Rosa");
+		servico.alterar(car2);
+		
+		System.out.println("Carro alterado");
+		cars = servico.listar();
+		for(Carro c : cars) {
+			System.out.println(c);
+		}
+		System.out.println("Buscar Carro");
+		System.out.println(servico.procurarPorPlaca("ABC-1D23"));
+	}
+
+}

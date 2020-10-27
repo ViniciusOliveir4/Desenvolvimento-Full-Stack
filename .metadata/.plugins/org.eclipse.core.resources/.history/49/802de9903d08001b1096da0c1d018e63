@@ -1,0 +1,19 @@
+package app;
+
+import entidade.Biblioteca;
+
+public class Programa {
+
+	public static void main(String[] args) {
+		
+		
+		Biblioteca bib1 = new Biblioteca(1, "Cora Coralina", "Cidade de Goiás", "Rua da Ponte");
+		Biblioteca bib2 = new Biblioteca(2, "Machado de Assis", "Rio de Janeiro", "Cosme Velho");
+		Biblioteca bib3 = new Biblioteca(3, "Olavo Bilac", "São Paulo", "Luz");
+		
+		System.out.println(bib1);
+		System.out.println(bib2);
+		System.out.println(bib3);
+	}
+
+}

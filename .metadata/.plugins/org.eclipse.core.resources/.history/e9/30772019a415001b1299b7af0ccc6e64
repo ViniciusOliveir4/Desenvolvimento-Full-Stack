@@ -1,0 +1,11 @@
+package br.ufg.inf.spring.model.repositorio;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import br.ufg.inf.spring.model.entidades.Biblioteca;
+
+public interface CarroRepositorio extends JpaRepository<Biblioteca, Integer>{
+	
+	
+
+}

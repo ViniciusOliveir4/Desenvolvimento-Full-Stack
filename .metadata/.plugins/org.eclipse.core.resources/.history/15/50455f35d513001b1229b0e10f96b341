@@ -1,0 +1,20 @@
+package br.ufg.inf.spring.ctrl.negocio;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import br.ufg.inf.spring.model.entidades.Cidade;
+import br.ufg.inf.spring.model.repositorio.CidadeRepositorio;
+
+@Service
+public class CidadeNegocio {
+	
+	@Autowired
+	private CidadeRepositorio repositorio;
+	
+	public List<Cidade> findAll(){
+		return repositorio.findAll();
+	}
+}

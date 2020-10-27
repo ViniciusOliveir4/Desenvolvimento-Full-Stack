@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename field &apos;endereço&apos; in &apos;SistemaBancário.Pessoa&apos; to &apos;endereco&apos;&#x0D;&#x0A;- Original project: &apos;FullStack&apos;&#x0D;&#x0A;- Original element: &apos;SistemaBancário.Pessoa.endereço&apos;&#x0D;&#x0A;- Renamed element: &apos;SistemaBancário.Pessoa.endereco&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" delegate="false" deprecate="false" description="Rename field &apos;endereço&apos;" flags="589826" getter="false" id="org.eclipse.jdt.ui.rename.field" input="/src&lt;SistemaBancário{Pessoa.java[Pessoa^endereço" name="endereco" references="true" setter="false" stamp="1599750125616" textual="false" version="1.0"/>
+</session>
