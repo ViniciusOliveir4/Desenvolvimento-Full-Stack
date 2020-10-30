@@ -6,20 +6,28 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="modelo"/>
+		<item key="selection" value="carro"/>
 		<list key="findhistory">
+			<item value="biblioteca"/>
+			<item value="bibliotecas"/>
+			<item value="Bibliotecas"/>
+			<item value="Biblioteca"/>
+			<item value="BibliotecaNegocio"/>
+			<item value="Modelo"/>
 			<item value="cidade"/>
 			<item value="Cidade"/>
-			<item value="biblioteca"/>
-			<item value="Biblioteca"/>
 		</list>
 		<list key="replacehistory">
-			<item value="modelo"/>
-			<item value="Modelo"/>
-			<item value="fabricante"/>
-			<item value="Fabricante"/>
 			<item value="carro"/>
+			<item value="carros"/>
+			<item value="Carros"/>
 			<item value="Carro"/>
+			<item value="CarroNegocio"/>
+			<item value="Fabricante"/>
+			<item value="Modelo"/>
+			<item value="modelo"/>
+			<item value="modelos"/>
+			<item value="fabricante"/>
 			<item value="biblioteca"/>
 			<item value="Biblioteca"/>
 		</list>
