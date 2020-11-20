@@ -73,27 +73,4 @@ public class FabricanteNegocio {
 		}
 	}
 	
-	public Fabricante findByNome(String str) throws NotFoundException {
-		List<Fabricante> list = repositorio.findByNomeFabricante(str);
-		if(list.size() > 0) {
-			return list.get(0);
-		}
-		else {
-			throw new NotFoundException("Fabricante com nome '"+str+"' não encontrada");
-		}
-	}
-	
-	public List<Fabricante> findAllNome(String str) throws NotFoundException {
-		List<Fabricante> list = repositorio.findByNomeFabricanteContains(str);
-		if(list.size() > 0) {
-			return list;
-		}
-		else {
-			throw new NotFoundException("Fabricante com a ocorrência '"+str+"' não encontrada");
-		}
-	}
-	
-	public List<Fabricante> findAllOrderNome(){
-		return repositorio.findAllOrderNome();
-	}
 }

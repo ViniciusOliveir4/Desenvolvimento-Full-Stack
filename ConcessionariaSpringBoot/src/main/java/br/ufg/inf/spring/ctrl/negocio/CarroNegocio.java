@@ -75,28 +75,4 @@ public class CarroNegocio {
 		}
 	}
 	
-	public Carro findByNome(String str) throws NotFoundException {
-		List<Carro> list = repositorio.findByNomeCarro(str);
-		if(list.size() > 0) {
-			return list.get(0);
-		}
-		else {
-			throw new NotFoundException("Carro com nome '"+str+"' não encontrada");
-		}
-	}
-	
-	public List<Carro> findAllNome(String str) throws NotFoundException {
-		List<Carro> list = repositorio.findByNomeCarroContains(str);
-		if(list.size() > 0) {
-			return list;
-		}
-		else {
-			throw new NotFoundException("Carro com a ocorrência '"+str+"' não encontrada");
-		}
-	}
-	
-	public List<Carro> findAllOrderNome(){
-		return repositorio.findAllOrderNome();
-	}
-	
 }

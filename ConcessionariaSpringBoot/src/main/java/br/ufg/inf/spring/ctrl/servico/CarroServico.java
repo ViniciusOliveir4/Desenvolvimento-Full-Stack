@@ -86,41 +86,7 @@ public class CarroServico {
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(carro);	
 		} catch (NotFoundException e) {
 			return ResponseEntity.status(HttpStatus.UNPROCESSABLE_ENTITY).body(carro);
-		}
-		
+		}	
 	}
-	
-	
-	@GetMapping(value="/nome/{str}")
-	public ResponseEntity<Carro> buscaPorNome(@PathVariable String str){
-		Carro carro = null;
-		try {
-			carro = negocio.findByNome(str);
-			return ResponseEntity.status(HttpStatus.OK).body(carro);
-		} catch (NotFoundException e) {
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(carro);
-		}
-		
-	}
-	
-	@GetMapping(value="/filtro/{str}")
-	public ResponseEntity<List<Carro>> FiltrPorNome(@PathVariable String str){
-		List<Carro> carros = null;
-		try {
-			carros = negocio.findAllNome(str);
-			return ResponseEntity.status(HttpStatus.OK).body(carros);
-		} catch (NotFoundException e) {
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(carros);
-		}
-		
-	}
-	
-	@GetMapping(value="ordem")
-	public ResponseEntity<List<Carro>> findAllOrderNome(){
-		
-		List<Carro> list = negocio.findAllOrderNome();
-		return ResponseEntity.ok().body(list);
-	}
-	
-	
+
 }

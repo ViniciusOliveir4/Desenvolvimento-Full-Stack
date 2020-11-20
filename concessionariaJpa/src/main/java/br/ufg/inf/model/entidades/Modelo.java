@@ -27,6 +27,7 @@ public class Modelo implements Serializable {
 	@JoinColumn(name="fabricante_Id")
 	private Fabricante fabricante;
 	
+	public Modelo() {}
 	
 	public Modelo(Integer modeloId, String nomeModelo, Fabricante fabricante) {
 		super();

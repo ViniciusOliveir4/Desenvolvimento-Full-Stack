@@ -84,36 +84,4 @@ public class FabricanteServico {
 		}
 	}
 	
-	
-	@GetMapping(value="/nome/{str}")
-	public ResponseEntity<Fabricante> buscaPorNome(@PathVariable String str){
-		Fabricante fabricante = null;
-		try {
-			fabricante = negocio.findByNome(str);
-			return ResponseEntity.status(HttpStatus.OK).body(fabricante);
-		} catch (NotFoundException e) {
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(fabricante);
-		}
-		
-	}
-	
-	@GetMapping(value="/filtro/{str}")
-	public ResponseEntity<List<Fabricante>> FiltrPorNome(@PathVariable String str){
-		List<Fabricante> fabricantes = null;
-		try {
-			fabricantes = negocio.findAllNome(str);
-			return ResponseEntity.status(HttpStatus.OK).body(fabricantes);
-		} catch (NotFoundException e) {
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(fabricantes);
-		}
-		
-	}
-	
-	@GetMapping(value="ordem")
-	public ResponseEntity<List<Fabricante>> findAllOrderNome(){
-		
-		List<Fabricante> list = negocio.findAllOrderNome();
-		return ResponseEntity.ok().body(list);
-	}
-	
 }

@@ -21,6 +21,7 @@ public class Fabricante implements Serializable{
 	@Column(name="fabricante_Nome")
 	private String fabricanteNome;
 	
+	public Fabricante() {}
 	
 	public Fabricante(Integer fabricanteId, String fabricanteNome) {
 		super();

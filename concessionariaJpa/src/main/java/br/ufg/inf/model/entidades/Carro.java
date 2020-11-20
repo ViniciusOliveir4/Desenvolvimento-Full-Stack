@@ -38,6 +38,7 @@ public class Carro implements Serializable{
 	@JoinColumn(name="id_Modelo")
 	private Modelo modelo;
 	
+	public Carro() {}
 	
 	public Carro(Integer idCarro, TipoCarro tipo, String placa, int ano, String cor, Modelo modelo) {
 		super();
